@@ -7,8 +7,8 @@
     <ProjectGuid>{D0B28A8F-F3A7-49E1-B1F3-47D39B6E70EA}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CSharpNoob</RootNamespace>
-    <AssemblyName>CSharpNoob</AssemblyName>
+    <RootNamespace>CSci</RootNamespace>
+    <AssemblyName>CSci</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -42,9 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BitManip.cs" />
     <Compile Include="BTNode.cs" />
+    <Compile Include="Combinations.cs" />
+    <Compile Include="DishesForPeople.cs" />
     <Compile Include="DynProgramming.cs" />
+    <Compile Include="GraphBFS.cs" />
     <Compile Include="Greedy.cs" />
+    <Compile Include="InterleaveStrings.cs" />
     <Compile Include="MaxHeap.cs" />
     <Compile Include="LinkedNode.cs" />
     <Compile Include="LngComSeq.cs" />
@@ -53,7 +58,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RBTNode.cs" />
-    <Compile Include="RunLenEnc.cs" />
+    <Compile Include="RLE.cs" />
+    <Compile Include="SnakeNLadder.cs" />
+    <Compile Include="StringPattern.cs" />
+    <Compile Include="URLShortener.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -19,10 +19,10 @@ namespace CSci
 					 int temp = i;
 					 for (int j = 0; j < patLen; j++)
 					 {
-						  System.Console.WriteLine("Current character of Input String is " + input[temp]);
+						  //System.Console.WriteLine("Current character of Input String is " + input[temp]);
 						  if (j + 1 < patLen && pattern[j + 1] == '*')
 						  {
-								System.Console.WriteLine("  Found '*' character after " + input[j]);
+								//System.Console.WriteLine("  Found '*' character after " + input[j]);
 								while (input[temp] == pattern[j] && inputLen - temp >= patLen - j)
 								{
 									 temp++;
@@ -32,13 +32,13 @@ namespace CSci
 						  }
 						  else if (input[temp] == pattern[j] || pattern[j] == '.')
 						  {
-								System.Console.WriteLine("  Found '.' character ");
+								//System.Console.WriteLine("  Found '.' character ");
 								temp++;
 								match = true;
 						  }
 						  else
 						  {
-								System.Console.WriteLine("No match at " + temp);
+								//System.Console.WriteLine("No match at " + temp);
 								match = false;
 								break;
 						  }
@@ -57,16 +57,19 @@ namespace CSci
 			 }
 				int y = 10;
 				int x = Greedy.findMinSteps(y);
-				System.Console.WriteLine("This greedy algorithm says it'll take " + x + " steps to get from " + y + " to 0");
+				System.Console.WriteLine("This greedy algorithm says it'll take " + x 
+					+ " steps to get from " + y + " to 0");
 
 				int[] memo  = null;
 				memo = new int[y + 1];
 
 				x = Memoization.getMinSteps(y, memo);
-				System.Console.WriteLine("This memoization approach says it'll take " + x + " steps to get from " + y + " to 0");
+				System.Console.WriteLine("This memoization approach says it'll take " + x 
+					+ " steps to get from " + y + " to 0");
 
 				x = DynProgramming.getMinSteps(y);
-				System.Console.WriteLine("This dynamic programming approach says it'll take " + x + " steps to get from " + y + " to 0");
+				System.Console.WriteLine("This dynamic programming approach says it'll take " 
+					+ x + " steps to get from " + y + " to 0");
 
 
 				int[] val = new int[] { 50, 3, 500, 20, 7 };
@@ -74,7 +77,8 @@ namespace CSci
 
 				/*
 				maxval = LngComSeq.lcs("abcdefxztgh", "beasvbfzh");
-				System.Console.WriteLine("The longest common sequence between abcdefxztgh and beasvbfzh is length " + maxval);
+				System.Console.WriteLine("The longest common sequence \ 
+				between abcdefxztgh and beasvbfzh is length " + maxval);
 				*/
 				/*
 				int[] listest = new int[] { 7, 10, 6, 4, 17, 13, 20};
@@ -98,7 +102,20 @@ namespace CSci
 				BTNode test = new BTNode();
 				test.TestBTNode();
 
-				RunLenEnc.testRLE();
+			//StringPattern.testMatch();
+			RLE.testRLE();
+
+			//SnakeNLadder.TestGame();
+
+			//GraphBFS.testGraphBFS();
+
+			Combinations.testThis();
+
+			URLShortener.testURLShortener();
+
+			DishesForPeople dishtest = new DishesForPeople();
+
+			dishtest.testDishes();
 		  }
 	 }
 }
